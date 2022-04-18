@@ -8,12 +8,12 @@ namespace Textadventure
 {
     public class Inventory
     {
-        private string[] itemId;
+        private string[] _itemId;
 
         public string[] ItemId
         {
-            get { return itemId; }
-            set { itemId = value; }
+            get { return _itemId; }
+            set { _itemId = value; }
         }
 
     }

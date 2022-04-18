@@ -8,26 +8,26 @@ namespace Textadventure
 {
     public class Item
     {
-        private string itemName;
+        private string _itemName;
 
         public string ItemName
         {
-            get { return itemName; }
-            set { itemName = value; }
+            get { return _itemName; }
+            set { _itemName = value; }
         }
-        private string itemDecription;
+        private string _itemDecription;
 
         public string ItemDescription
         {
-            get { return itemDecription; }
-            set { itemDecription = value; }
+            get { return _itemDecription; }
+            set { _itemDecription = value; }
         }
-        private string itemType;
+        private string _itemType;
 
         public string ItemType
         {
-            get { return itemType; }
-            set { itemType = value; }
+            get { return _itemType; }
+            set { _itemType = value; }
         }
 
     }

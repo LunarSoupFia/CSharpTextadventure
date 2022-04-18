@@ -8,27 +8,32 @@ namespace Textadventure
 {
     public class Option
     {
-        private string optionIdentifier;
-
-        public string OptionIdentifier
+        private OptionIdentifier _identifier;
+       
+        public OptionIdentifier Identifier
         {
-            get { return optionIdentifier; }
-            set { optionIdentifier = value; }
+            get { return _identifier; }
+            set { _identifier = value; }
         }
-        private string optionText;
+        private string _optionText;
 
         public string OptionText
         {
-            get { return optionText; }
-            set { optionText = value; }
+            get { return _optionText; }
+            set { _optionText = value; }
         }
-        private string[] nextScene;
+        private string[] _nextScene;
 
         public string[] NextScene
         {
-            get { return nextScene; }
-            set { nextScene = value; }
+            get { return _nextScene; }
+            set { _nextScene = value; }
         }
-
+        public Option(OptionIdentifier Identifier, string OptionText, string[] NextScene)
+        {
+            this.Identifier = Identifier;
+            this.OptionText = OptionText;
+            this.NextScene = NextScene;
+        }
     }
 }

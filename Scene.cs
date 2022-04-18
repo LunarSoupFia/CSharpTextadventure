@@ -1,25 +1,47 @@
 ﻿using System;
+using Textadventure;
 
 public class Scene
 {
-    private string sceneIdentifier;
+    private string _sceneIdentifier;
 
     public string SceneIdentifier
     {
-        get { return sceneIdentifier; }
-        set { sceneIdentifier = value; }
+        get { return _sceneIdentifier; }
+        set { _sceneIdentifier = value; }
     }
-    private string sceneDescription;
+    private string _sceneDescription;
 
     public string SceneDescription
     {
-        get { return sceneDescription; }
-        set { sceneDescription = value; }
+        get { return _sceneDescription; }
+        set { _sceneDescription = value; }
     }
-    public Scene()
+    private Option[] _options;
+    public Option[] Options
     {
-        
-    }   
-        
+        get { return _options; }
+        set { _options = value; }
+    }
+
+    public Scene(Option[] Options, string SceneIdentifier, string SceneDescription)
+    {
+        this.Options = Options;
+        this.SceneIdentifier = SceneIdentifier;
+        this.SceneDescription = SceneDescription;
+    }
+
+    //Diese Methode ermittelt eine Option anhand ihres Identifiers
+    internal Option getOptionByIdentifier(OptionIdentifier identifier)
+    {
+        foreach (Option option in this.Options)
+        {
+            if (option.Identifier == identifier)
+            {
+                return option;
+            }
+        }
+        return null;
+    }
 }
 
