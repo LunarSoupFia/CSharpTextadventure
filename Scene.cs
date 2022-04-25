@@ -31,7 +31,7 @@ public class Scene
         this.SceneDescription = SceneDescription;
     }
 
-    //Diese Methode ermittelt eine Option anhand ihres Identifiers
+    //Diese Methode ermittelt eine Option anhand ihres Identifiers.
     internal Option getOptionByIdentifier(OptionIdentifier identifier)
     {
         foreach (Option option in this.Options)
