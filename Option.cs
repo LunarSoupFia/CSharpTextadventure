@@ -29,6 +29,14 @@ namespace Textadventure
             get { return _nextScene; }
             set { _nextScene = value; }
         }
+
+        private Item _requiredItem;
+
+        public Item RequiredItem
+        {
+            get { return _requiredItem; }
+            set { _requiredItem = value; }
+        }
         public Option(OptionIdentifier Identifier, string OptionText, string[] NextScene)
         {
             this.Identifier = Identifier;
