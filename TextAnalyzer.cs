@@ -18,6 +18,10 @@ namespace Textadventure
             Option[] validOptions = currentScene.getOptionsByIdentifier(identifier);
             foreach (Option option in validOptions)
             {
+                if(option.AllowedFor == null || option.AllowedFor.Length == 0)
+                {
+                    return option;
+                }
                 foreach (string allowed in option.AllowedFor)
                 {
                     for (int i = 1; i < split.Length; i++)
@@ -40,11 +44,14 @@ namespace Textadventure
                 case "fight":
                     return OptionIdentifier.FIGHT;
                 case "flee":
+                case "flieh":
                     return OptionIdentifier.FLEE;
                 case "heal":
                     return OptionIdentifier.HEAL;
                 case "öffne":
                     return OptionIdentifier.OPEN;
+                case "drücke":
+                    return OptionIdentifier.PRESS;
                 default:
                     return OptionIdentifier.NULL;
             }

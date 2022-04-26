@@ -12,12 +12,12 @@ namespace Textadventure
 {
     public partial class Form1 : Form
     {
-        TestStory story;
+        TestFalle story;
 
         public Form1()
         {
             InitializeComponent();
-            story = new TestStory();
+            story = new TestFalle();
             textBox1.Text = story.CurrentScene.SceneDescription;
         }
 

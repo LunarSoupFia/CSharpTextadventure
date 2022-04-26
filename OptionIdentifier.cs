@@ -13,6 +13,7 @@ namespace Textadventure
         FLEE,
         HEAL,
         OPEN,
+        PRESS,
         NULL
     }
 }
