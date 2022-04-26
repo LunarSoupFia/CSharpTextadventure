@@ -12,13 +12,13 @@ namespace Textadventure
 {
     public partial class Form1 : Form
     {
-        Story testStory;
+        TestStory story;
 
         public Form1()
         {
             InitializeComponent();
-            testStory = new Story();
-            textBox1.Text = testStory.CurrentScene.SceneDescription;
+            story = new TestStory();
+            textBox1.Text = story.CurrentScene.SceneDescription;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -55,27 +55,47 @@ namespace Textadventure
         {
             if (e.KeyCode == Keys.Enter)
             {
-                Option chosenOption = null;
-                switch (textBox2.Text)
-                {
-                    case "fight":
-                        chosenOption = testStory.CurrentScene.getOptionByIdentifier(OptionIdentifier.FIGHT);
-                        break;
-                    case "flee":
-                        chosenOption = testStory.CurrentScene.getOptionByIdentifier(OptionIdentifier.FLEE);
-                        break;
-                    case "heal":
-                        chosenOption = testStory.CurrentScene.getOptionByIdentifier(OptionIdentifier.HEAL);
-                        break;
-                    default:
-                        break;
-                }
+                Option chosenOption = TextAnalyzer.GetOption(story.CurrentScene, inputbox.Text);
                 if (chosenOption != null)
                 {
-                    testStory.CurrentScene = testStory.getSceneByIdentifier(chosenOption.NextScene[0]);
-                    textBox1.Text = testStory.CurrentScene.SceneDescription;
+                    story.CurrentScene = story.getSceneByIdentifier(chosenOption.NextScene[0]);
+                    textBox1.Text = story.CurrentScene.SceneDescription;
+                }
+                else
+                {
+                    MessageBox.Show("invalid command");
                 }
             }
+        }
+
+        private void action3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void action1_Click(object sender, EventArgs e)
+        {
+            inputbox.Text = action1.Text;
+        }
+
+        private void action2_Click(object sender, EventArgs e)
+        {
+            inputbox.Text = action2.Text;
+        }
+
+        private void action3_Click_1(object sender, EventArgs e)
+        {
+            inputbox.Text = action3.Text;
+        }
+
+        private void action4_Click(object sender, EventArgs e)
+        {
+            inputbox.Text = action4.Text;
+        }
+
+        private void action5_Click(object sender, EventArgs e)
+        {
+            inputbox.Text = action5.Text;
         }
     }
 }

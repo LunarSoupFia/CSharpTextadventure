@@ -11,6 +11,8 @@ namespace Textadventure
     {
         FIGHT,
         FLEE,
-        HEAL
+        HEAL,
+        OPEN,
+        NULL
     }
 }

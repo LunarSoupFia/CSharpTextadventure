@@ -37,11 +37,29 @@ namespace Textadventure
             get { return _requiredItem; }
             set { _requiredItem = value; }
         }
+        private string[] _allowedFor;
+
+        public string[] AllowedFor
+        {
+            get { return _allowedFor; }
+            set { _allowedFor = value; }
+        }
+
         public Option(OptionIdentifier Identifier, string OptionText, string[] NextScene)
         {
             this.Identifier = Identifier;
             this.OptionText = OptionText;
             this.NextScene = NextScene;
         }
+
+        public Option(OptionIdentifier Identifier, string OptionText, string[] NextScene, string[] AllowedFor)
+        {
+            this.Identifier = Identifier;
+            this.OptionText = OptionText;
+            this.NextScene = NextScene;
+            this.AllowedFor = AllowedFor;
+        }
+
+
     }
 }

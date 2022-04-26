@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Textadventure;
 
 public class Scene
@@ -31,17 +32,19 @@ public class Scene
         this.SceneDescription = SceneDescription;
     }
 
-    //Diese Methode ermittelt eine Option anhand ihres Identifiers.
-    internal Option getOptionByIdentifier(OptionIdentifier identifier)
+    //Diese Methode ermittelt alle möglichen Optionen anhand eines Identifiers.
+    internal Option[] getOptionsByIdentifier(OptionIdentifier identifier)
     {
+        ArrayList validOptions = new ArrayList();
+        
         foreach (Option option in this.Options)
         {
             if (option.Identifier == identifier)
             {
-                return option;
+                validOptions.Add(option);
             }
         }
-        return null;
+        return (Option[])validOptions.ToArray(typeof(Option));
     }
 }
 
