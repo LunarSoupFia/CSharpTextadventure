@@ -30,7 +30,7 @@ namespace Textadventure
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.outputBox = new System.Windows.Forms.TextBox();
             this.inputbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -43,19 +43,20 @@ namespace Textadventure
             this.action5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // outputBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Black;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(351, 211);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(732, 467);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Output";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.outputBox.BackColor = System.Drawing.Color.Black;
+            this.outputBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.outputBox.ForeColor = System.Drawing.Color.White;
+            this.outputBox.Location = new System.Drawing.Point(351, 211);
+            this.outputBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.outputBox.Multiline = true;
+            this.outputBox.Name = "outputBox";
+            this.outputBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.outputBox.Size = new System.Drawing.Size(732, 467);
+            this.outputBox.TabIndex = 0;
+            this.outputBox.Text = "Output";
+            this.outputBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // inputbox
             // 
@@ -182,7 +183,7 @@ namespace Textadventure
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.inputbox);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.outputBox);
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "Form1";
             this.Text = "C# Textadventure";
@@ -194,7 +195,7 @@ namespace Textadventure
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox outputBox;
         private System.Windows.Forms.TextBox inputbox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox3;

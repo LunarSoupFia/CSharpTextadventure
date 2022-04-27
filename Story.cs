@@ -17,6 +17,7 @@ namespace Textadventure
             new Scene(new Option[]{}, "END_FAIL","Alle sterben"),
             new Scene(new Option[]{}, "END_SUCCESS","Und dann lebten sie glücklich und zufrieden.")
         };
+
         private Scene _currentScene;
         public Scene CurrentScene
         {

@@ -12,13 +12,13 @@ namespace Textadventure
 {
     public partial class Form1 : Form
     {
-        TestFalle story;
+        TestStory story;
 
         public Form1()
         {
             InitializeComponent();
-            story = new TestFalle();
-            textBox1.Text = story.CurrentScene.SceneDescription;
+            story = new TestStory();
+            outputBox.Text = story.CurrentScene.SceneDescription;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -58,8 +58,9 @@ namespace Textadventure
                 Option chosenOption = TextAnalyzer.GetOption(story.CurrentScene, inputbox.Text);
                 if (chosenOption != null)
                 {
+                    string nl = Environment.NewLine;
                     story.CurrentScene = story.getSceneByIdentifier(chosenOption.NextScene[0]);
-                    textBox1.Text = story.CurrentScene.SceneDescription;
+                    outputBox.Text = chosenOption.OptionText + nl + nl + story.CurrentScene.SceneDescription;
                 }
                 else
                 {

@@ -42,14 +42,22 @@ namespace Textadventure
             switch (keyword)
             {
                 case "fight":
+                case "bekämpfe":
+                case "schlage":
                     return OptionIdentifier.FIGHT;
                 case "flee":
                 case "flieh":
                     return OptionIdentifier.FLEE;
                 case "heal":
+                case "heile":
                     return OptionIdentifier.HEAL;
                 case "öffne":
                     return OptionIdentifier.OPEN;
+                case "gehe":
+                case "laufe":
+                    return OptionIdentifier.GO;
+                case "frage":
+                    return OptionIdentifier.ASK;
                 case "drücke":
                     return OptionIdentifier.PRESS;
                 default:

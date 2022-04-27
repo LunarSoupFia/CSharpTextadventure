@@ -14,6 +14,8 @@ namespace Textadventure
         HEAL,
         OPEN,
         PRESS,
+        GO,
+        ASK,
         NULL
     }
 }

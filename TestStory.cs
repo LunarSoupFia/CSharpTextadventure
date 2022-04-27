@@ -8,12 +8,8 @@ namespace Textadventure
 {
     internal class TestStory
     {
-        Scene[] scenes = {
-            new Scene(new Option[]{
-                new Option(OptionIdentifier.OPEN, "Öffnen", new string[]{"END_SUCCESS"}, new string[]{"Tor","Schloss","Tür"})
-            }, "T1","Testszene Tor öffnen"),
-            new Scene(new Option[]{}, "END_SUCCESS","Das Tör öffnet sich")
-        };
+        Scene[] scenes=new Scene[] { };
+        
         private Scene _currentScene;
         public Scene CurrentScene
         {
@@ -22,6 +18,10 @@ namespace Textadventure
         }
         public TestStory()
         {
+            scenes = scenes
+                .Concat(TestDorf.getScenes())
+                .Concat(TestFalle.getScenes())
+                .ToArray();
             CurrentScene = scenes[0];
         }
         
