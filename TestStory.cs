@@ -19,8 +19,9 @@ namespace Textadventure
         public TestStory()
         {
             scenes = scenes
-                .Concat(TestDorf.getScenes())
-                .Concat(TestFalle.getScenes())
+                .Concat(TestVillage.getScenes())
+                .Concat(TestTrap.getScenes())
+                .Concat(TestBattle.getScenes("DORF1", "TRAP1"))
                 .ToArray();
             CurrentScene = scenes[0];
         }

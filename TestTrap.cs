@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Textadventure
 {
-    internal static class TestFalle
+    internal static class TestTrap
     {
         private static Scene[] _scenes = {
             new Scene(new Option[]{

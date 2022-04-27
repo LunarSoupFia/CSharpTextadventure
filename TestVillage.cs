@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Textadventure
 {
-    internal static class TestDorf
+    internal static class TestVillage
     {
         private static string nl = Environment.NewLine;
         private static Scene[] _scenes = {
@@ -21,7 +21,7 @@ namespace Textadventure
                 new Option(OptionIdentifier.ASK, "Du fragst nach einer Quelle für Waffen, aber der Fremdenführer informiert dich, dass das Dorf keinen Schmied hat, da dieser aktuell auf Reisen ist.", new string[]{"DORF_GUIDE1"}, new string[]{"Waffen", "Schmied"})
             }, "DORF_GUIDE1","Der Fremdenführer schaut dich wartend an:" + nl + "Gibt es sonst noch etwas, womit ich helfen kann?"),
             new Scene(new Option[]{
-                new Option(OptionIdentifier.ASK, "Du fragst den Wirt nach dem Schatz der Antiken. Er zuckt kurz zusammen bevor er sich über den Thresen beugt und dich zu ihm zieht:" + nl + "Du hast Mumm Kumpel, einfach in eine Taverne zu gehen und nach dem Schatz zu fragen. Willst du etwa gleich sterben?" + nl + "Er zeigt dir einen Weg zu einem alten Tempel, in dem der Schatz sein soll.", new string[]{"TRAP1"}, new string[]{"Schatz"}) 
+                new Option(OptionIdentifier.ASK, "Du fragst den Wirt nach dem Schatz der Antiken. Er zuckt kurz zusammen bevor er sich über den Thresen beugt und dich zu ihm zieht:" + nl + "Du hast Mumm Kumpel, einfach in eine Taverne zu gehen und nach dem Schatz zu fragen. Willst du etwa gleich sterben?" + nl + "Er zeigt dir einen Weg zu einem alten Tempel, in dem der Schatz sein soll.", new string[]{"BATTLE_START", "TRAP1"}, new string[]{"Schatz"}) 
             }, "DORF_TAVERNE1","Du betrittst eine Taverne, in der das Leben pulsiert. An vielen Tischen lassen sich Gruppen von Trinkliebhabern und Glückspielfreunden sehen. Du setzt dich an den Thresen, wo dich der Wirt begrüßt:" + nl + "Na, was darf es sein?"),
             new Scene(new Option[]{}, "END_SUCCESS","Das Tor öffnet sich und du siehst vor dir die Reichtümer der uralten Zivilisation welche diesen Tempel gebaut hat.")
         };
