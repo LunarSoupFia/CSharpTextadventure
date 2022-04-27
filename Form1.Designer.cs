@@ -33,7 +33,7 @@ namespace Textadventure
             this.outputBox = new System.Windows.Forms.TextBox();
             this.inputbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.questBox = new System.Windows.Forms.TextBox();
             this.questheader = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.action1 = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@ namespace Textadventure
             this.outputBox.Size = new System.Drawing.Size(732, 467);
             this.outputBox.TabIndex = 0;
             this.outputBox.Text = "Output";
-            this.outputBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.outputBox.TextChanged += new System.EventHandler(this.outputBox_TextChanged);
             // 
             // inputbox
             // 
@@ -66,8 +66,8 @@ namespace Textadventure
             this.inputbox.Size = new System.Drawing.Size(732, 39);
             this.inputbox.TabIndex = 1;
             this.inputbox.Text = "Eingabe";
-            this.inputbox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            this.inputbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
+            this.inputbox.TextChanged += new System.EventHandler(this.inputBox_TextChanged);
+            this.inputbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputBox_KeyDown);
             // 
             // label1
             // 
@@ -83,15 +83,15 @@ namespace Textadventure
             this.label1.Text = "text command help sheet:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox3
+            // questBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(23, 211);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(314, 467);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.questBox.Location = new System.Drawing.Point(23, 211);
+            this.questBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.questBox.Multiline = true;
+            this.questBox.Name = "questBox";
+            this.questBox.Size = new System.Drawing.Size(314, 467);
+            this.questBox.TabIndex = 3;
+            this.questBox.TextChanged += new System.EventHandler(this.questBox_TextChanged);
             // 
             // questheader
             // 
@@ -180,7 +180,7 @@ namespace Textadventure
             this.Controls.Add(this.action1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.questheader);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.questBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.inputbox);
             this.Controls.Add(this.outputBox);
@@ -198,7 +198,7 @@ namespace Textadventure
         private System.Windows.Forms.TextBox outputBox;
         private System.Windows.Forms.TextBox inputbox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox questBox;
         private System.Windows.Forms.Label questheader;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label action1;

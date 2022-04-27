@@ -42,6 +42,7 @@ namespace Textadventure
             switch (keyword)
             {
                 case "fight":
+                case "besiege":
                 case "bekämpfe":
                 case "schlage":
                     return OptionIdentifier.FIGHT;

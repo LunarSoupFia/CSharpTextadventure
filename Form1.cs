@@ -21,7 +21,7 @@ namespace Textadventure
             outputBox.Text = story.CurrentScene.SceneDescription;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void outputBox_TextChanged(object sender, EventArgs e)
         {
             
         }
@@ -36,7 +36,7 @@ namespace Textadventure
 
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void questBox_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -46,21 +46,33 @@ namespace Textadventure
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void inputBox_TextChanged(object sender, EventArgs e)
         {
             
         }
 
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        private void inputBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 Option chosenOption = TextAnalyzer.GetOption(story.CurrentScene, inputbox.Text);
                 if (chosenOption != null)
                 {
+                    int random = 0;
+                    if (chosenOption.NextScene.Length > 1)
+                    {
+                        random = Convert.ToInt32(new Random().Next(chosenOption.NextScene.Length));
+                    }
                     string nl = Environment.NewLine;
-                    story.CurrentScene = story.getSceneByIdentifier(chosenOption.NextScene[0]);
-                    outputBox.Text = chosenOption.OptionText + nl + nl + story.CurrentScene.SceneDescription;
+                    story.CurrentScene = story.getSceneByIdentifier(chosenOption.NextScene[random]);
+                    string[] split = chosenOption.OptionText.Split('#');
+                    if (split.Length > 1)
+                    {
+                        outputBox.Text = split[random] + nl + nl + story.CurrentScene.SceneDescription;
+                    } else {
+                        outputBox.Text = split[0] + nl + nl + story.CurrentScene.SceneDescription;
+                    }
+
                 }
                 else
                 {
