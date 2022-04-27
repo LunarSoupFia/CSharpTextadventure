@@ -13,7 +13,8 @@ namespace Textadventure
             new Scene(new Option[]{
                 new Option(OptionIdentifier.ASK, "Du fragst im Dorf nach dem Schatz des antiken Volk. Man informiert dich über einen Greis, welcher am Stadtrand lebt und der dir helfen könnte.", new string[]{"DORF1"}, new string[]{"Schatz"}),
                 new Option(OptionIdentifier.ASK, "Du fragst einen Passanten nach Informationen über das Dorf. Der Passant stellt sich als ein Fremdenführer heraus, welcher dir beginnt von der Stadt zu erzählen:" + nl + "Dieses Dorf ist bereits hunderte von Jahren alt und ist bis heute bekannt für seine Braukunst und Kultur", new string[]{"DORF_GUIDE1"}, new string[]{"Dorf"}),
-                new Option(OptionIdentifier.GO, "Du besuchst den alten Mann am Rand der Stadt.", new string[]{"DORF_OLD_MAN1"}, new string[]{"Mann", "Greis", "alter", "altem", "alten"})
+                new Option(OptionIdentifier.GO, "Du besuchst den alten Mann am Rand der Stadt.", new string[]{"DORF_OLD_MAN1"}, new string[]{"Mann", "Greis", "alter", "altem", "alten"}),
+                new Option(OptionIdentifier.GO, "Du brichst wieder auf zum Tempel der unendlichen Qualen.", new string[]{"TRAP1", "BATTLE_START"}, new string[]{"Tempel", "Temple", "Berg"})
             }, "DORF1","Du befindest dich im kleinen Dorf und stehst auf einem großen Platz."),
             new Scene(new Option[]{
                 new Option(OptionIdentifier.ASK, "Du fragst nach der Braukunst des Dorfs, der Fremdenführer erzählt dir von der Taverne, in der auch gebraut wird, und führt dich dorthin.", new string[]{"DORF_TAVERNE1"}, new string[]{"Braukunst", "Taverne", "Brauerei"}),
