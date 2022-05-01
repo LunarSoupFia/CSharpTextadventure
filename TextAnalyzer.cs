@@ -48,6 +48,7 @@ namespace Textadventure
                     return OptionIdentifier.FIGHT;
                 case "flee":
                 case "flieh":
+                case "fliehe":
                     return OptionIdentifier.FLEE;
                 case "heal":
                 case "heile":

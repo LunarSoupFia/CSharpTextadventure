@@ -16,6 +16,7 @@ namespace Textadventure
         PRESS,
         GO,
         ASK,
+        LISTEN,
         NULL
     }
 }

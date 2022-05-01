@@ -111,6 +111,11 @@ namespace Textadventure
             inputbox.Text = action5.Text;
         }
 
+        private void action6_Click(object sender, EventArgs e)
+        {
+            inputbox.Text = action6.Text;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
