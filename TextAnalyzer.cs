@@ -41,6 +41,8 @@ namespace Textadventure
         {
             switch (keyword)
             {
+                case "höre":
+                    return OptionIdentifier.LISTEN;
                 case "fight":
                 case "besiege":
                 case "bekämpfe":
