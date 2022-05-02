@@ -37,7 +37,7 @@ namespace Textadventure
             return null;
         }
 
-        private static OptionIdentifier getOptionIdentifierByKeyword(string keyword)
+        public static OptionIdentifier getOptionIdentifierByKeyword(string keyword)
         {
             switch (keyword)
             {
