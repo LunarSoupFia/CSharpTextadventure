@@ -71,7 +71,7 @@ namespace Textadventure
             new Scene(new Option[]{
                 new Option(OptionIdentifier.GO, "Du gehst auf das Mädchen zu.", new string[]{"LITTLE_GIRL2"}, new string[]{"Mädchen", "ihr", "weiter"}),
                 new Option(OptionIdentifier.GO, "", new string[]{"DORF1"}, new string[]{"Dorf"})
-            },"LITTLE_GIRL1","Ein kleines Mädchen sitzt ein Stück vor dir alleine vor dem Waldrand. Neben ihr auf dem Boden steht ein Korb voller süßer Beeren."),
+            },"LITTLE_GIRL1","Ein kleines Mädchen sitzt, ein Stück vor dir, alleine vor dem Waldrand. Neben ihr auf dem Boden steht ein Korb voller süßer Beeren."),
             new Scene(new Option[]{
                 new Option(OptionIdentifier.ASK, "Sie beginnt zu weinen.", new string[]{"LITTLE_GIRL3"}, new string[]{"allein", "traurig", "los"}),
                 new Option(OptionIdentifier.ASK, "Ich heiße Marie.", new string[]{"LITTLE_GIRL2"}, new string[]{"Name", "heißt", "nennt"}),
