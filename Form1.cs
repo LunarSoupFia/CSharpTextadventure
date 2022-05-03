@@ -118,6 +118,11 @@ namespace Textadventure
                     } else {
                         outputBox.Text = split[0] + nl + nl + story.CurrentScene.SceneDescription;
                     }
+                    if (chosenOption.Visibility == VisibilityCondition.ONCE)
+                    {
+                        chosenOption.Visibility = VisibilityCondition.VISITED;
+                    }
+                    
 
                 }
                 else
@@ -174,6 +179,16 @@ namespace Textadventure
         private void action7_Click(object sender, EventArgs e)
         {
             inputbox.Text = action7.Text;
+        }
+
+        private void action8_Click(object sender, EventArgs e)
+        {
+            inputbox.Text = action8.Text;
+        }
+        
+        private void action9_Click(object sender, EventArgs e)
+        {
+            inputbox.Text = action9.Text;
         }
 
         private void option1_Click(object sender, EventArgs e)

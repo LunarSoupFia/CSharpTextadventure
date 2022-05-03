@@ -17,6 +17,7 @@ namespace Textadventure
         GO,
         ASK,
         LISTEN,
+        SEARCH,
         LOOK,
         NULL
     }

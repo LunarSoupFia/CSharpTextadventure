@@ -37,6 +37,14 @@ namespace Textadventure
             get { return _requiredItem; }
             set { _requiredItem = value; }
         }
+
+        private VisibilityCondition _visibility;
+        public VisibilityCondition Visibility
+        {
+            get { return _visibility; }
+            set { _visibility = value; }
+        }
+
         private string[] _allowedFor;
 
         public string[] AllowedFor
@@ -50,6 +58,7 @@ namespace Textadventure
             this.Identifier = Identifier;
             this.OptionText = OptionText;
             this.NextScene = NextScene;
+            this.Visibility = VisibilityCondition.ALWAYS;
         }
 
         public Option(OptionIdentifier Identifier, string OptionText, string[] NextScene, string[] AllowedFor)
@@ -58,8 +67,17 @@ namespace Textadventure
             this.OptionText = OptionText;
             this.NextScene = NextScene;
             this.AllowedFor = AllowedFor;
+            this.Visibility = VisibilityCondition.ALWAYS;
         }
 
+        public Option(OptionIdentifier Identifier, string OptionText, string[] NextScene, string[] AllowedFor, VisibilityCondition Visibility)
+        {
+            this.Identifier = Identifier;
+            this.OptionText = OptionText;
+            this.NextScene = NextScene;
+            this.AllowedFor = AllowedFor;
+            this.Visibility = Visibility;
+        }
 
     }
 }

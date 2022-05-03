@@ -39,7 +39,8 @@ public class Scene
         
         foreach (Option option in this.Options)
         {
-            if (option.Identifier == identifier)
+            if (option.Identifier == identifier && 
+                (option.Visibility == VisibilityCondition.ALWAYS || option.Visibility == VisibilityCondition.ONCE))
             {
                 validOptions.Add(option);
             }

@@ -56,6 +56,7 @@ namespace Textadventure
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.action9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // outputBox
@@ -315,6 +316,7 @@ namespace Textadventure
             this.action8.Size = new System.Drawing.Size(95, 32);
             this.action8.TabIndex = 19;
             this.action8.Text = "höre zu";
+            this.action8.Click += new System.EventHandler(this.action8_Click);
             // 
             // label2
             // 
@@ -382,6 +384,19 @@ namespace Textadventure
             this.label7.TabIndex = 25;
             this.label7.Text = "TRENNER";
             // 
+            // action9
+            // 
+            this.action9.AutoSize = true;
+            this.action9.BackColor = System.Drawing.Color.Transparent;
+            this.action9.ForeColor = System.Drawing.Color.White;
+            this.action9.Location = new System.Drawing.Point(820, 873);
+            this.action9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.action9.Name = "action9";
+            this.action9.Size = new System.Drawing.Size(75, 32);
+            this.action9.TabIndex = 26;
+            this.action9.Text = "schau";
+            this.action9.Click += new System.EventHandler(this.action9_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
@@ -390,6 +405,7 @@ namespace Textadventure
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1753, 1004);
+            this.Controls.Add(this.action9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -453,6 +469,7 @@ namespace Textadventure
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label action9;
     }
 }
 

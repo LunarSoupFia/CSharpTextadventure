@@ -15,8 +15,8 @@ namespace Textadventure
                 new Option(OptionIdentifier.ASK, "Du fragst einen Passanten nach Informationen über das Dorf. Der Passant stellt sich als ein Fremdenführer heraus, welcher dir beginnt von der Stadt zu erzählen:" + nl + "Dieses Dorf ist bereits hunderte von Jahren alt und ist bis heute bekannt für seine Braukunst und Kultur", new string[]{"DORF_GUIDE1"}, new string[]{"Dorf"}),
                 new Option(OptionIdentifier.GO, "Du besuchst den alten Mann am Rand der Stadt.", new string[]{"DORF_OLD_MAN1"}, new string[]{"Mann", "Greis", "alter", "altem", "alten"}),
                 new Option(OptionIdentifier.GO, "Entschlossen brichts du in die nähere Umgebung des Dorfes auf.", new string[]{"LITTLE_GIRL1"}, new string[]{"Wald", "Waldrand", "Westen"}),
-                new Option(OptionIdentifier.GO, "Du brichst wieder auf zum Tempel der unendlichen Qualen.", new string[]{"TRAP1", "BATTLE_START"}, new string[]{"Tempel", "Temple", "Berg"})
-                
+                new Option(OptionIdentifier.GO, "Du brichst wieder auf zum Tempel der unendlichen Qualen.", new string[]{"TRAP1", "BATTLE_START"}, new string[]{"Tempel", "Temple", "Berg"}),
+                new Option(OptionIdentifier.LOOK, "Du schaust dich im Dorf um.", new string[]{"DORF_QUEST1"})
             }, "DORF1","Du befindest dich in einem kleinen Dorf und stehst auf dem großen Platz. Das Dorf liegt am Fuße eines hohen Berges und im Westen wird es von einem grünen und ruhigen Wald umschlossen. Du bist hier, da du Geschichten von einem großem Schatz gehört hast - doch noch weißt du nicht wo du suchen sollst. "),
             new Scene(new Option[]{
                 new Option(OptionIdentifier.ASK, "Du fragst den alten Mann nach dem Schatz des antiken Volk. Er beginnt dir von seinen früheren Abenteuern zu erzählen:", new string[]{"DORF_OLD_MAN_ADVENTURES1"}, new string[]{"Tempel", "Schatz", "Volk"}),

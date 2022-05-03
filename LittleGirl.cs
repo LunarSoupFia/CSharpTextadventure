@@ -99,10 +99,10 @@ namespace Textadventure
                 new Option(OptionIdentifier.GO, "", new string[]{"LITTLE_GIRL_DRYAD1"}, new string[]{"links", "Eichen", "Eiche"}),
                 new Option(OptionIdentifier.GO, "", new string[]{"LITTLE_GIRL6"}, new string[]{"rechts"}),
                 new Option(OptionIdentifier.GO, "", new string[]{"LITTLE_GIRL6"}, new string[]{"geradeaus"}),
-                new Option(OptionIdentifier.LOOK, "Du schaust dich um und suchst, doch irgendwie scheinst du noch nicht am richtigem Ort zu sein. ", new string[]{"LITTLE_GIRL5"}, new string[]{"Umhang"})
+                new Option(OptionIdentifier.SEARCH, "Du schaust dich um und suchst, doch irgendwie scheinst du noch nicht am richtigem Ort zu sein. ", new string[]{"LITTLE_GIRL5"}, new string[]{"Umhang"})
             },"LITTLE_GIRL5","Nachdem du einige Schritte in den Wald hinein gegangen bist, siehst du links von dir hohe Eichen, rechts einen kleinen Bach, der weiter geradeaus hin zu Sträuchern und Büschen fließt."),
             new Scene(new Option[]{
-                new Option(OptionIdentifier.LOOK, "", new string[]{"LITTLE_GIRL7"}, new string[]{"Umhang", "Sträucher", "Beeren", "Büschen", "Spuren", "leeren"})
+                new Option(OptionIdentifier.SEARCH, "", new string[]{"LITTLE_GIRL7"}, new string[]{"Umhang", "Sträucher", "Beeren", "Büschen", "Spuren", "leeren"})
             },"LITTLE_GIRL6","Du kommst zu den Stäuchern und Büschen, von denen einige noch über und über mit Beeren behangen sind, doch an anderen siehst du, das welche gepflückt wurden."),
             new Scene(new Option[]{
                 new Option(OptionIdentifier.GO, "", new string[]{"LITTLE_GIRL8"}, new string[]{"Waldrand", "Marie", "Mädchen"}),
