@@ -22,6 +22,7 @@ namespace Textadventure
                 .Concat(TestVillage.getScenes())
                 .Concat(TestTrap.getScenes())
                 .Concat(TestBattle.getScenes("DORF1", "TRAP1"))
+                .Concat(LittleGirl.getScenes())
                 .ToArray();
             CurrentScene = scenes[0];
         }

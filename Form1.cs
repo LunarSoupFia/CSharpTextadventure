@@ -131,7 +131,7 @@ namespace Textadventure
         
         private void action1_Click(object sender, EventArgs e)
         {
-            if (inputbox.Text == "Eingabe")
+            if (inputbox.Text == "Eingabe" || inputbox.Text == "")
             {
                 inputbox.Text = action1.Text;
             } else { inputbox.Text += " " + action1.Text; }
@@ -139,7 +139,7 @@ namespace Textadventure
 
         private void action2_Click(object sender, EventArgs e)
         {
-            if (inputbox.Text == "Eingabe")
+            if (inputbox.Text == "Eingabe" || inputbox.Text == "")
             {
                 inputbox.Text = action2.Text;
             } else { inputbox.Text += " " + action2.Text; }
@@ -147,7 +147,7 @@ namespace Textadventure
 
         private void action3_Click(object sender, EventArgs e)
         {
-            if (inputbox.Text == "Eingabe")
+            if (inputbox.Text == "Eingabe" || inputbox.Text == "")
             {
                 inputbox.Text = action3.Text;
             } else { inputbox.Text += " " + action3.Text; }
@@ -155,7 +155,7 @@ namespace Textadventure
 
         private void action4_Click(object sender, EventArgs e)
         {
-            if (inputbox.Text == "Eingabe")
+            if (inputbox.Text == "Eingabe" || inputbox.Text == "")
             {
                 inputbox.Text = action4.Text;
             } else { inputbox.Text += " " + action4.Text; }
@@ -163,7 +163,7 @@ namespace Textadventure
 
         private void action5_Click(object sender, EventArgs e)
         {
-            if (inputbox.Text == "Eingabe")
+            if (inputbox.Text == "Eingabe" || inputbox.Text == "")
             {
                 inputbox.Text = action5.Text;
             } else { inputbox.Text += " " + action5.Text; }
@@ -171,7 +171,7 @@ namespace Textadventure
 
         private void action6_Click(object sender, EventArgs e)
         {
-            if (inputbox.Text == "Eingabe")
+            if (inputbox.Text == "Eingabe" || inputbox.Text == "")
             {
                 inputbox.Text = action6.Text;
             }

@@ -64,6 +64,9 @@ namespace Textadventure
                     return OptionIdentifier.ASK;
                 case "drücke":
                     return OptionIdentifier.PRESS;
+                case "suche":
+                case "schau":
+                    return OptionIdentifier.LOOK;
                 default:
                     return OptionIdentifier.NULL;
             }
