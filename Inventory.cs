@@ -9,12 +9,18 @@ namespace Textadventure
     public class Inventory
     {
         private string[] _itemId;
-
+        
         public string[] ItemId
         {
             get { return _itemId; }
             set { _itemId = value; }
         }
 
+	    
+	
+          
+	
+
+	
     }
 }
