@@ -5,13 +5,10 @@
 /// </summary>
 public class QuestLog
 {
-	public QuestLog()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
 	private static string nl = Environment.NewLine;
-	private static Scene[] _scenes = {
-			new Scene(new Option[]{
-}
+	public QuestLog()
+	{ }
+		//
+		// TODO: Add Quest Log logic here
+		//
 }
