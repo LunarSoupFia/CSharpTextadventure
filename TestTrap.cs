@@ -14,7 +14,8 @@ namespace Textadventure
                 new Option(OptionIdentifier.PRESS, "Drücke", new string[]{"TRAP2"}, new string[]{"Stern"}),
                 new Option(OptionIdentifier.PRESS, "Drücke", new string[]{"END_FAILURE"}, new string[]{"Sonne"}),
                 new Option(OptionIdentifier.GO, "Du gehst zurück zum Dorfplatz", new string[]{"DORF1", "BATTLE_START"}, new string[]{"Dorf", "zurück"})
-            }, "TRAP1","Nach langer Suche im Tempel des schrecklichen Todes stehst du endlich vor der Kammer der unendlichen Schmerzen in der ein großer Schatz verborgen sein soll. Drei Symbole sind an der Tür zu sehen, ein Mond, eine Sonne und ein Stern."),
+            }, "TRAP1","Nach langer Suche im Tempel des schrecklichen Todes stehst du endlich vor der Kammer der unendlichen Schmerzen in der ein großer Schatz verborgen sein soll. Drei Symbole sind an der Tür zu sehen, ein Mond, eine Sonne und ein Stern.",
+                "$ancientTemple"),
             new Scene(new Option[]{
                 new Option(OptionIdentifier.PRESS, "Drücke", new string[]{"TRAP3"}, new string[]{"Mond"}),
                 new Option(OptionIdentifier.PRESS, "Drücke", new string[]{"END_FAILURE"}, new string[]{"Stern"}),

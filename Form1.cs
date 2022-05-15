@@ -20,7 +20,7 @@ namespace Textadventure
             InitializeComponent();
             story = new TestStory();
             outputBox.Text = story.CurrentScene.SceneDescription;
-            Quest quest = new Quest("DoSomething","DoIt","test","testReward")
+            Quest quest = new Quest("DoSomething", "DoIt", "test", "testReward");
         }
 
         private void outputBox_TextChanged(object sender, EventArgs e)
@@ -122,6 +122,16 @@ namespace Textadventure
                     if (chosenOption.Visibility == VisibilityCondition.ONCE)
                     {
                         chosenOption.Visibility = VisibilityCondition.VISITED;
+                    }
+                    
+                    if (story.CurrentScene.BackgroundImage != null)
+                    {
+                        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+                        Image backImage = (Image)resources.GetObject(story.CurrentScene.BackgroundImage);
+                        if (backImage != null)
+                        {
+                            BackgroundImage = backImage;
+                        }
                     }
                     
 

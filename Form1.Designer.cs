@@ -65,7 +65,7 @@ namespace Textadventure
             this.outputBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.outputBox.ForeColor = System.Drawing.Color.White;
             this.outputBox.Location = new System.Drawing.Point(351, 211);
-            this.outputBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.outputBox.Margin = new System.Windows.Forms.Padding(6);
             this.outputBox.Multiline = true;
             this.outputBox.Name = "outputBox";
             this.outputBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -77,7 +77,7 @@ namespace Textadventure
             // inputbox
             // 
             this.inputbox.Location = new System.Drawing.Point(351, 753);
-            this.inputbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.inputbox.Margin = new System.Windows.Forms.Padding(6);
             this.inputbox.Name = "inputbox";
             this.inputbox.Size = new System.Drawing.Size(732, 39);
             this.inputbox.TabIndex = 1;
@@ -103,7 +103,7 @@ namespace Textadventure
             // questBox
             // 
             this.questBox.Location = new System.Drawing.Point(22, 211);
-            this.questBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.questBox.Margin = new System.Windows.Forms.Padding(6);
             this.questBox.Multiline = true;
             this.questBox.Name = "questBox";
             this.questBox.Size = new System.Drawing.Size(312, 467);
@@ -127,9 +127,9 @@ namespace Textadventure
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Location = new System.Drawing.Point(22, 26);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox1.Size = new System.Drawing.Size(316, 134);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
@@ -402,7 +402,7 @@ namespace Textadventure
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$world")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1753, 1004);
             this.Controls.Add(this.action9);
@@ -432,7 +432,7 @@ namespace Textadventure
             this.Controls.Add(this.label1);
             this.Controls.Add(this.inputbox);
             this.Controls.Add(this.outputBox);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "C# Textadventure";
             this.Load += new System.EventHandler(this.Form1_Load);

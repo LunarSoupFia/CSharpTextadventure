@@ -25,12 +25,28 @@ public class Scene
         set { _options = value; }
     }
 
+    private string _backgroundImage;
+
+    public string BackgroundImage
+    {
+        get { return _backgroundImage; }
+        set { _backgroundImage = value; }
+    }
+
     public Scene(Option[] Options, string SceneIdentifier, string SceneDescription)
     {
         this.Options = Options;
         this.SceneIdentifier = SceneIdentifier;
         this.SceneDescription = SceneDescription;
     }
+    public Scene(Option[] Options, string SceneIdentifier, string SceneDescription, string BackgroundImage)
+    {
+        this.Options = Options;
+        this.SceneIdentifier = SceneIdentifier;
+        this.SceneDescription = SceneDescription;
+        this.BackgroundImage = BackgroundImage;
+    }
+        
 
     //Diese Methode ermittelt alle möglichen Optionen anhand eines Identifiers.
     internal Option[] getOptionsByIdentifier(OptionIdentifier identifier)

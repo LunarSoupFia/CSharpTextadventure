@@ -66,19 +66,20 @@ namespace Textadventure
 
          */
 
-
+        private static string nl = Environment.NewLine;
         private static Scene[] _scenes = {
             new Scene(new Option[]{
                 new Option(OptionIdentifier.GO, "Du gehst auf das Mädchen zu.", new string[]{"LITTLE_GIRL2"}, new string[]{"Mädchen", "ihr", "weiter"}),
                 new Option(OptionIdentifier.GO, "", new string[]{"DORF1"}, new string[]{"Dorf"})
-            },"LITTLE_GIRL1","Ein kleines Mädchen sitzt, ein Stück vor dir, alleine vor dem Waldrand. Neben ihr auf dem Boden steht ein Korb voller süßer Beeren."),
+            },"LITTLE_GIRL1","Ein kleines Mädchen sitzt, ein Stück vor dir, alleine vor dem Waldrand. Neben ihr auf dem Boden steht ein Korb voller süßer Beeren.",
+                "$forest"),
             new Scene(new Option[]{
-                new Option(OptionIdentifier.ASK, "Sie beginnt zu weinen.", new string[]{"LITTLE_GIRL3"}, new string[]{"allein", "traurig", "los"}),
+                new Option(OptionIdentifier.ASK, "Sie beginnt zu weinen.", new string[]{"LITTLE_GIRL3"}, new string[]{"Wohlbefinden", "allein", "traurig", "los"}),
                 new Option(OptionIdentifier.ASK, "Ich heiße Marie.", new string[]{"LITTLE_GIRL2"}, new string[]{"Name", "heißt", "nennt"}),
                 new Option(OptionIdentifier.GO, "Ungerührt von ihrem Leid gehst du zurück ins Dorf", new string[]{"DORF1"}, new string[]{"Dorf"})
             },"LITTLE_GIRL2","Sie blickt dich mit traurigen Augen an."),
             new Scene(new Option[]{
-                new Option(OptionIdentifier.PRESS, "Sie beruhigt sich und erzählt dir: Ich habe im Wald, beim Beeren sammeln, meinen Umhang vergessen, doch es wird bald dunkel und ich traue mich nicht ihn zurück zu holen.", new string[]{"LITTLE_GIRL4"}, new string[]{"Mädchen", "Sie", "Marie"}),
+                new Option(OptionIdentifier.PRESS, "Sie beruhigt sich und erzählt dir:" + nl + "Ich habe im Wald, beim Beeren sammeln, meinen Umhang vergessen, doch es wird bald dunkel und ich traue mich nicht ihn zurück zu holen.", new string[]{"LITTLE_GIRL4"}, new string[]{"Mädchen", "Sie", "Marie"}),
                 new Option(OptionIdentifier.GO, "Ungerührt von ihrem Leid gehst du zurück ins Dorf.", new string[]{"DORF1"}, new string[]{"Dorf"})
             },"LITTLE_GIRL3",""),
             new Scene(new Option[]{
@@ -117,10 +118,10 @@ namespace Textadventure
             new Scene(new Option[]{
                 new Option(OptionIdentifier.ASK, "Die schöne Frau blickt dich verwundert an: Ich weiß nicht, aber manchmal sammeln die Menschen Früchte am kleinen Bach im Wald. Sucht doch dort.", new string[]{"LITTLE_GIRL_DRYAD2"}, new string[]{"Mädchen", "Marie", "Umhang", "Dorf"}),
                 new Option(OptionIdentifier.ASK, "Hier würde der Dryadenquest beginnen. Aber den gibt es noch nicht, also ab in den Wald", new string[]{"LITTLE_GIRL5"}, new string[]{"bist", "Name"})
-            },"LITTLE_GIRL_DRYAD1","Hinter einer der Eichen tritt eine wunderschöne Frau hervor. Sie blickt dich an und fragt, was tust du hier?"),
+            },"LITTLE_GIRL_DRYAD1","Hinter einer der Eichen tritt eine wunderschöne Frau des Wald hervor. Sie blickt dich an und fragt, was tust du hier?", "$dryad"),
             new Scene(new Option[]{
                 new Option(OptionIdentifier.GO, "", new string[]{"LITTLE_GIRL6"}, new string[]{"Beeren"}),
-                new Option(OptionIdentifier.ASK, "Hier würde der Dryadenquest beginnen. Aber den gibt es noch nicht, also ab in den Wald", new string[]{"LITTLE_GIRL5"}, new string[]{"bist", "Name"})
+                new Option(OptionIdentifier.ASK, "Hier würde der Dryadenquest beginnen. Aber den gibt es noch nicht, also ab in den Wald", new string[]{"LITTLE_GIRL5"}, new string[]{ "Name", "bist"})
             },"LITTLE_GIRL_DRYAD2",""),
 
         };
