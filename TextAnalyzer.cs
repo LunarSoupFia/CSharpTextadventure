@@ -71,6 +71,8 @@ namespace Textadventure
                     return OptionIdentifier.LOOK;
                 case "suche":
                     return OptionIdentifier.SEARCH;
+                case "benutze":
+                    return OptionIdentifier.USE;
                 default:
                     return OptionIdentifier.NULL;
             }

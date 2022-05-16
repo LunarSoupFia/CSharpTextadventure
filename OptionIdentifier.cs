@@ -19,6 +19,7 @@ namespace Textadventure
         LISTEN,
         SEARCH,
         LOOK,
+        USE,
         NULL
     }
 }

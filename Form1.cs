@@ -20,7 +20,6 @@ namespace Textadventure
             InitializeComponent();
             story = new TestStory();
             outputBox.Text = story.CurrentScene.SceneDescription;
-            Quest quest = new Quest("DoSomething", "DoIt", "test", "testReward");
         }
 
         private void outputBox_TextChanged(object sender, EventArgs e)
