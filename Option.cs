@@ -8,6 +8,14 @@ namespace Textadventure
 {
     public class Option
     {
+        private string _group;
+
+        public string Group
+        {
+            get { return _group; }
+            set { _group = value; }
+        }
+
         private OptionIdentifier _identifier;
        
         public OptionIdentifier Identifier
@@ -70,7 +78,7 @@ namespace Textadventure
             this.Visibility = VisibilityCondition.ALWAYS;
         }
 
-        public Option(OptionIdentifier Identifier, string OptionText, string[] NextScene, string[] AllowedFor, VisibilityCondition Visibility)
+        public Option(string Group, OptionIdentifier Identifier, string OptionText, string[] NextScene, string[] AllowedFor, VisibilityCondition Visibility)
         {
             this.Identifier = Identifier;
             this.OptionText = OptionText;

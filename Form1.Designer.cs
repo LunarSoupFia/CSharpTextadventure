@@ -141,6 +141,7 @@ namespace Textadventure
             this.action1.AutoSize = true;
             this.action1.BackColor = System.Drawing.Color.Transparent;
             this.action1.ForeColor = System.Drawing.Color.White;
+            this.action1.Image = global::Textadventure.Properties.Resources.button;
             this.action1.Location = new System.Drawing.Point(22, 873);
             this.action1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.action1.Name = "action1";
@@ -402,7 +403,7 @@ namespace Textadventure
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$world")));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1753, 1004);
             this.Controls.Add(this.action9);
