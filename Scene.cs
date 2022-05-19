@@ -77,7 +77,7 @@ public class Scene
         this.ToActivate = ToActivate;
     }
 
-    internal Option[] ActivateOptions(string[] ToActivate)
+    /*internal Option[] ActivateOptions(string[] ToActivate)
     {
         Option[] Options;
         Option[] ActivatedOptions;
@@ -86,7 +86,7 @@ public class Scene
 
         }
         return Options;
-    }
+    }*/
 
     //Diese Methode ermittelt alle möglichen Optionen anhand eines Identifiers.
     internal Option[] getOptionsByIdentifier(OptionIdentifier identifier)
