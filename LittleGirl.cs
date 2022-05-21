@@ -118,7 +118,8 @@ namespace Textadventure
             new Scene(new Option[]{
                 new Option(OptionIdentifier.ASK, "Die schöne Frau blickt dich verwundert an: Ich weiß nicht, aber manchmal sammeln die Menschen Früchte am kleinen Bach im Wald. Sucht doch dort.", new string[]{"LITTLE_GIRL_DRYAD2"}, new string[]{"Mädchen", "Marie", "Umhang", "Dorf"}),
                 new Option(OptionIdentifier.ASK, "Hier würde der Dryadenquest beginnen. Aber den gibt es noch nicht, also ab in den Wald", new string[]{"LITTLE_GIRL5"}, new string[]{"bist", "Name"})
-            },"LITTLE_GIRL_DRYAD1","Hinter einer der Eichen tritt eine wunderschöne Frau des Wald hervor. Sie blickt dich an und fragt, was tust du hier?", "$dryad"),
+            },"LITTLE_GIRL_DRYAD1","Hinter einer der Eichen tritt eine wunderschöne Frau des Wald hervor. Sie blickt dich an und fragt, was tust du hier?",
+                "$dryad"),
             new Scene(new Option[]{
                 new Option(OptionIdentifier.GO, "", new string[]{"LITTLE_GIRL6"}, new string[]{"Beeren"}),
                 new Option(OptionIdentifier.ASK, "Hier würde der Dryadenquest beginnen. Aber den gibt es noch nicht, also ab in den Wald", new string[]{"LITTLE_GIRL5"}, new string[]{ "Name", "bist"})

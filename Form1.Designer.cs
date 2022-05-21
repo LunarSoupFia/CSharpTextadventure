@@ -141,7 +141,6 @@ namespace Textadventure
             this.action1.AutoSize = true;
             this.action1.BackColor = System.Drawing.Color.Transparent;
             this.action1.ForeColor = System.Drawing.Color.White;
-            this.action1.Image = global::Textadventure.Properties.Resources.button;
             this.action1.Location = new System.Drawing.Point(22, 873);
             this.action1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.action1.Name = "action1";
