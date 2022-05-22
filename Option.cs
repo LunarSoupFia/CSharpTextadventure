@@ -86,7 +86,7 @@ namespace Textadventure
             this.Visibility = VisibilityCondition.ALWAYS;
         }
 
-        public Option(string Group, OptionIdentifier Identifier, string OptionText, string[] NextScene, string[] AllowedFor, VisibilityCondition Visibility)
+        public Option(OptionIdentifier Identifier, string OptionText, string[] NextScene, string[] AllowedFor, VisibilityCondition Visibility)
         {
             this.Identifier = Identifier;
             this.OptionText = OptionText;
@@ -105,7 +105,7 @@ namespace Textadventure
             this.NeededQuest = NeededQuest;
         }
 
-        public Option(string Group, OptionIdentifier Identifier, string OptionText, string[] NextScene, string[] AllowedFor, VisibilityCondition Visibility, string NeededQuest)
+        public Option(OptionIdentifier Identifier, string OptionText, string[] NextScene, string[] AllowedFor, VisibilityCondition Visibility, string NeededQuest)
         {
             this.Identifier = Identifier;
             this.OptionText = OptionText;

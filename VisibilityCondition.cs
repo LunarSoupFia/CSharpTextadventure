@@ -10,7 +10,6 @@ namespace Textadventure
     {
         ALWAYS,
         ONCE,
-        VISITED,
         INACTIVE_ALWAYS,
         INACTIVE_ONCE
     }

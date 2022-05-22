@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Textadventure
 {
+    //AKTUELL UNGENUTZT
     public class Item
     {
         private string _itemName;

@@ -12,13 +12,13 @@ namespace Textadventure
 {
     public partial class Form1 : Form
     {
-        TestStory story;
+        Story story;
         string[] labelOptionList = new string[] {"","","","","",""};
         string[] defaultOptionList = new string[] { "", "", "", "", "", "" };
         public Form1()
         {
             InitializeComponent();
-            story = new TestStory();
+            story = new Story();
             outputBox.Text = story.CurrentScene.SceneDescription;
         }
 
@@ -120,7 +120,7 @@ namespace Textadventure
                     }
                     if (chosenOption.Visibility == VisibilityCondition.ONCE)
                     {
-                        chosenOption.Visibility = VisibilityCondition.VISITED;
+                        chosenOption.Visibility = VisibilityCondition.INACTIVE_ONCE;
                     }
                     
                     if (story.CurrentScene.BackgroundImage != null)
@@ -132,6 +132,7 @@ namespace Textadventure
                             BackgroundImage = backImage;
                         }
                     }
+
                     
 
                 }

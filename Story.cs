@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Textadventure
 {
-    internal class TestStory
+    internal class Story
     {
         Scene[] scenes=new Scene[] { };
         
@@ -16,12 +16,12 @@ namespace Textadventure
             get { return _currentScene; } 
             set { _currentScene = value; }
         }
-        public TestStory()
+        public Story()
         {
             scenes = scenes
-                .Concat(TestVillage.getScenes())
-                .Concat(TestTrap.getScenes())
-                .Concat(TestBattle.getScenes("DORF1", "TRAP1"))
+                .Concat(Village.getScenes())
+                .Concat(Temple.getScenes())
+                .Concat(OrcBattle.getScenes("DORF1", "TRAP1"))
                 .Concat(LittleGirl.getScenes())
                 .Concat(VillageQuest1.getScenes())
                 .ToArray();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Textadventure
 {
-    internal class TestBattle
+    internal class OrcBattle
     {
         private static Scene[] _scenes = {
             new Scene(new Option[]{
@@ -23,8 +23,8 @@ namespace Textadventure
                 new Option(OptionIdentifier.FLEE, "Du fliehst dorthin wo du hergekommen bist", new string[]{"#START#"})
             }, "BATTLE_HIT1","Jetzt ist die Gelegenheit da, der Ork ist angeschlagen."),
             new Scene(new Option[]{
-                new Option(OptionIdentifier.GO, "Start, Dorf", new string[]{"#START#"})
-            }, "BATTLE_DEATH","Der Ork erschlägt dich und plündert deine Überreste. Tippe: Gehe zum Start um neu anzufangen.")
+                new Option(OptionIdentifier.GO, "Während deine Leiche mit der Natur verschmilzt, steigt dein Geist zu einer höheren Ebene auf, wo dir eine Stimme etwas sagt:", new string[]{"END_THANKS"}, new string[]{"Ende", "Schluss"})
+            }, "BATTLE_DEATH","Der Ork erschlägt dich und plündert deine Überreste. Tippe 'Gehe zu Ende' um dein Abenteuer zu beenden.")
         };
         public static Scene[] getScenes(string startScene, string endScene)
         {

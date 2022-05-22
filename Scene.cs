@@ -33,12 +33,12 @@ public class Scene
         set { _backgroundImage = value; }
     }
 
-    private string[] _toActivate;
+    private string[] _toActivateQuest;
 
-    public string[] ToActivate
+    public string[] ToActivateQuest
     {
-        get { return _toActivate; }
-        set { _toActivate = value; }
+        get { return _toActivateQuest; }
+        set { _toActivateQuest = value; }
     }
 
     //Konstruktor mit notwendigen Attributen
@@ -58,37 +58,28 @@ public class Scene
         this.BackgroundImage = BackgroundImage;
     }
 
-    //Konstruktor mit notwendigen Attributen + ActivateOptions
-    public Scene(Option[] Options, string SceneIdentifier, string SceneDescription, string[] ActivateOptions)
+    //Konstruktor mit notwendigen Attributen + ActivateQuest
+    public Scene(Option[] Options, string SceneIdentifier, string SceneDescription, string[] ToActivateQuest)
     {
         this.Options = Options;
         this.SceneIdentifier = SceneIdentifier;
         this.SceneDescription = SceneDescription;
-        this.ToActivate = ToActivate;
+        this.ToActivateQuest = ToActivateQuest;
     }
 
-    //Konstruktor mit notwendigen Attributen + BackgroundImage + ActivateOptions
-    public Scene(Option[] Options, string SceneIdentifier, string SceneDescription, string BackgroundImage, string[] ToActivate)
+    //Konstruktor mit notwendigen Attributen + BackgroundImage + ActivateQuest
+    public Scene(Option[] Options, string SceneIdentifier, string SceneDescription, string BackgroundImage, string[] ToActivateQuest)
     {
         this.Options = Options;
         this.SceneIdentifier = SceneIdentifier;
         this.SceneDescription = SceneDescription;
         this.BackgroundImage = BackgroundImage;
-        this.ToActivate = ToActivate;
+        this.ToActivateQuest = ToActivateQuest;
     }
 
-    /*internal Option[] ActivateOptions(string[] ToActivate)
-    {
-        Option[] Options;
-        Option[] ActivatedOptions;
-        for (int i = 0; i < ToActivate.Length; i++)
-        {
 
-        }
-        return Options;
-    }*/
-
-    //Diese Methode ermittelt alle möglichen Optionen anhand eines Identifiers.
+    //Diese Methode ermittelt alle möglichen Optionen anhand eines Identifiers,
+    //ihres Zustand und den Quests aus QuestLog.cs
     internal Option[] getOptionsByIdentifier(OptionIdentifier identifier)
     {
         ArrayList validOptions = new ArrayList();
@@ -98,12 +89,37 @@ public class Scene
             if (option.Identifier == identifier && 
                 (option.Visibility == VisibilityCondition.ALWAYS || option.Visibility == VisibilityCondition.ONCE))
             {
-                validOptions.Add(option);
+                if (option.NeededQuest != null)
+                {
+                    string[] SplitNeeded = option.NeededQuest.Split('_');
+                    if (SplitNeeded.Length == 2)
+                    {
+                        /*foreach (Quest quest in story.QuestLog)
+                        *{
+                        *  if (SplitNeeded[0] == quest.QuestName) 
+                        *  {
+                        *      foreach (Stage in quest.Stages)
+                        *      {
+                        *          if (SplitNeeded[1] == Stage.Ident && Stage.Status == Status.Active)
+                        *          {
+                        *              validOptions.Add(option);
+                        *          }
+                        *      }
+                        *  }
+                        *}
+                    */
+                    }
+                }
+                else
+                {
+                    validOptions.Add(option);
+                } 
                 if (option.Visibility == VisibilityCondition.ONCE)
                 {
                     option.Visibility = VisibilityCondition.INACTIVE_ONCE;
                 }
             }
+            
         }
         return (Option[])validOptions.ToArray(typeof(Option));
     }
