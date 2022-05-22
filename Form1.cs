@@ -137,7 +137,7 @@ namespace Textadventure
                     {
                         if (quest.QuestStatus != 0 || quest.QuestStatus != 1)
                         {
-                            story.questLog.QuestLogDescription = story.questLog.QuestLogDescription + quest.QuestDescription + nl + nl;
+                            story.questLog.QuestLogDescription = story.questLog.QuestLogDescription + quest.QuestName + nl + quest.QuestDescription + nl + nl;
                         }
                     }
                     questBox.Text = story.questLog.QuestLogDescription;
