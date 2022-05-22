@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Textadventure
 {
     internal class Story
-    {
+    { 
         Scene[] scenes = new Scene[] { };
         public QuestLog questLog = new QuestLog("","", new Quest[]
         {

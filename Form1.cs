@@ -131,7 +131,7 @@ namespace Textadventure
                         {
                             BackgroundImage = backImage;
                         }
-                    }
+                    } 
                     story.questLog.QuestLogDescription = "";
                     foreach (Quest quest in story.questLog.Quests)
                     {

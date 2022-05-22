@@ -37,7 +37,7 @@ public class Quest
 			set { _questStatus = value; }
 		}
 		
-
+	 
 		public Quest(string QuestName, string QuestDescription, string EndSceneIdentifier, string QuestReward, double QuestStatus)
 		{
 		this.QuestName = QuestName;
