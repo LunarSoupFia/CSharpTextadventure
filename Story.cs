@@ -12,9 +12,11 @@ namespace Textadventure
         public QuestLog questLog = new QuestLog("","", new Quest[]
         {
             new Quest("testQ", "TestQuest","Dies ist eine Test-Quest","TRAP1","", 0.1),
-            new Quest("Schatz","Finde den Schatz des anktiken Volk","END_THANKS","", 0 ),
-            new Quest("Umhang Finden","Hilf dem kleinen Mädchen ihren Umhang wieder zu finden.","LITTLE_GIRL_DRYAD2","", 0),
-            new Quest("Dorftornado","Stelle dich dem Dorftornado in der Taverne","TORNADO_DEATH","", 0)
+            new Quest("Schatz","Finde den Schatz des anktiken Volk","END_THANKS","", 0.0 ),
+            new Quest("Umhang Finden","Hilf dem kleinen Mädchen ihren Umhang wieder zu finden.","LITTLE_GIRL_DRYAD2","", 0.0),
+            new Quest("Dorftornado","Stelle dich dem Dorftornado in der Taverne","TORNADO_DEATH","", 0.0)
+
+
 
         });
 
