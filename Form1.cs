@@ -132,9 +132,15 @@ namespace Textadventure
                             BackgroundImage = backImage;
                         }
                     }
-
-                    
-
+                    story.questLog.QuestLogDescription = "";
+                    foreach (Quest quest in story.questLog.Quests)
+                    {
+                        if (quest.QuestStatus != 0 || quest.QuestStatus != 1)
+                        {
+                            story.questLog.QuestLogDescription = story.questLog.QuestLogDescription + quest.QuestDescription + nl + nl;
+                        }
+                    }
+                    questBox.Text = story.questLog.QuestLogDescription;
                 }
                 else
                 {

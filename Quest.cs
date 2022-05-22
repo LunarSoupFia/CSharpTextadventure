@@ -5,34 +5,46 @@
 /// </summary>
 public class Quest
 {
-	
-		public string QuestName
+	private string _questName;
+	public string QuestName
 		{
-			get { return QuestName; }
-			set { QuestName = value; }
+			get { return _questName; }
+			set { _questName = value; }
 		}
-		public string QuestDescription
+	private string _questDescription;	
+	public string QuestDescription
 		{
-			get { return QuestDescription; }
-			set { QuestDescription = value; }
+			get { return _questDescription; }
+			set { _questDescription = value; }
 		}
-		public string EndSceneIdentifier
+	private string _endSceneIdentifier;	
+	public string EndSceneIdentifier
 		{
-			get { return EndSceneIdentifier; }
-			set { EndSceneIdentifier = value; }
+			get { return _endSceneIdentifier; }
+			set { _endSceneIdentifier = value; }
 		}
-		public string QuestReward
+	private string _questReward;
+	public string QuestReward
 		{
-			get { return QuestReward; }
-			set { QuestReward = value; }
+			get { return _questReward; }
+			set { _questReward = value; }
 		}
 
-		public Quest(string Name, string Description, string Identifier, string Reward)
+	private double _questStatus;
+	public double QuestStatus 
 		{
-		this.QuestName = Name;
-		this.QuestDescription = Description;	
-		this.EndSceneIdentifier = Identifier;
-		this.QuestReward = Reward;
+			get { return _questStatus; }
+			set { _questStatus = value; }
+		}
+		
+
+		public Quest(string QuestName, string QuestDescription, string EndSceneIdentifier, string QuestReward, double QuestStatus)
+		{
+		this.QuestName = QuestName;
+		this.QuestDescription = QuestDescription;	
+		this.EndSceneIdentifier = EndSceneIdentifier;
+		this.QuestReward = QuestReward;
+		this.QuestStatus = QuestStatus;
 		}
 
 }

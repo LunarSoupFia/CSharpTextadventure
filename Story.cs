@@ -8,8 +8,12 @@ namespace Textadventure
 {
     internal class Story
     {
-        Scene[] scenes=new Scene[] { };
-        
+        Scene[] scenes = new Scene[] { };
+        public QuestLog questLog = new QuestLog("","", new Quest[]
+        {
+            new Quest("testQ","Dies ist eine TestQuest","TRAP1","", 0.1)
+        });
+
         private Scene _currentScene;
         public Scene CurrentScene
         {
