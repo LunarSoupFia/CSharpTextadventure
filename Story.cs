@@ -11,13 +11,11 @@ namespace Textadventure
         Scene[] scenes = new Scene[] { };
         public QuestLog questLog = new QuestLog("","", new Quest[]
         {
-            new Quest("testQ", "TestQuest","Dies ist eine Test-Quest","TRAP1","", 0.1),
-            new Quest("Schatz","Finde den Schatz des anktiken Volk","END_THANKS","", 0.0 ),
-            new Quest("Umhang Finden","Hilf dem kleinen Mädchen ihren Umhang wieder zu finden.","LITTLE_GIRL_DRYAD2","", 0.0),
-            new Quest("Dorftornado","Stelle dich dem Dorftornado in der Taverne","TORNADO_DEATH","", 0.0)
-
-
-
+            new Quest("SCHATZ", "Der uralte Schatz","Findet den Schatz des anktiken Volk.","END_SUCCESS","", 0.1 ),
+            new Quest("TEMPLE", "Der antike Tempel", "Ihr habt herausgefunden wie man zum Tempel des antiken Volk kommt.", "TRAP1","", 0.0),
+            new Quest("UMHANG", "Umhang Finden","Helft dem kleinen Mädchen ihren Umhang wieder zu finden.","LITTLE_GIRL8","", 0.0),
+            new Quest("LOST.BOY", "Der verlorene Junge", "Findet den verloren Jungen Timmy, und bringt ihn zu seiner Mutter","DORF_QUEST1_END","",0.0),
+            new Quest("TORNADO", "Das brennende Getränk","Stellt euch in der Taverne dem Dorftornado, und überlebt.","TORNADO_SUCCESS","Dorftornado™", 0.0)
         });
 
         private Scene _currentScene;

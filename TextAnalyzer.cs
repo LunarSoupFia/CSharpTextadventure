@@ -9,13 +9,13 @@ namespace Textadventure
 {
     internal class TextAnalyzer
     {
-        public static Option GetOption(Scene currentScene, string input)
+        public static Option GetOption(Scene currentScene, string input, QuestLog questLog)
         {
             input = input.ToLower();
             string[] split = input.Split(' ');
             string keyword = split[0];
             OptionIdentifier identifier = getOptionIdentifierByKeyword(keyword);
-            Option[] validOptions = currentScene.getOptionsByIdentifier(identifier);
+            Option[] validOptions = currentScene.getOptionsByIdentifier(identifier, questLog);
             foreach (Option option in validOptions)
             {
                 if(option.AllowedFor == null || option.AllowedFor.Length == 0)

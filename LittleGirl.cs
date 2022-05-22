@@ -101,7 +101,7 @@ namespace Textadventure
                 new Option(OptionIdentifier.GO, "", new string[]{"LITTLE_GIRL6"}, new string[]{"rechts"}),
                 new Option(OptionIdentifier.GO, "", new string[]{"LITTLE_GIRL6"}, new string[]{"geradeaus"}),
                 new Option(OptionIdentifier.SEARCH, "Du schaust dich um und suchst, doch irgendwie scheinst du noch nicht am richtigem Ort zu sein. ", new string[]{"LITTLE_GIRL5"}, new string[]{"Umhang"})
-            },"LITTLE_GIRL5","Nachdem du einige Schritte in den Wald hinein gegangen bist, siehst du links von dir hohe Eichen, rechts einen kleinen Bach, der weiter geradeaus hin zu Sträuchern und Büschen fließt."),
+            },"LITTLE_GIRL5","Nachdem du einige Schritte in den Wald hinein gegangen bist, siehst du links von dir hohe Eichen, rechts einen kleinen Bach, der weiter geradeaus hin zu Sträuchern und Büschen fließt.", null ,new string[]{"UMHANG"}),
             new Scene(new Option[]{
                 new Option(OptionIdentifier.SEARCH, "", new string[]{"LITTLE_GIRL7"}, new string[]{"Umhang", "Sträucher", "Beeren", "Büschen", "Spuren", "leeren"})
             },"LITTLE_GIRL6","Du kommst zu den Stäuchern und Büschen, von denen einige noch über und über mit Beeren behangen sind, doch an anderen siehst du, das welche gepflückt wurden."),

@@ -63,11 +63,11 @@ namespace Textadventure
             string[] input = inputbox.Text.Split(" ");
             if (input.Length > 0)
             {
-                foreach (Option option in story.CurrentScene.Options)
+                Option[] validOptions = story.CurrentScene.getOptionsByIdentifier(TextAnalyzer.getOptionIdentifierByKeyword(input[0]), story.questLog);
+                foreach (Option option in validOptions)
                 {
 
-                    if (option.Identifier == TextAnalyzer.getOptionIdentifierByKeyword(input[0])
-                       && option.AllowedFor != null && option.AllowedFor.Length > 0)
+                    if (option.AllowedFor != null && option.AllowedFor.Length > 0)
                     {
                         labelOptionList[optionCounter] = option.AllowedFor[0];
                         optionCounter++;
@@ -101,7 +101,7 @@ namespace Textadventure
         {
             if (e.KeyCode == Keys.Enter)
             {
-                Option chosenOption = TextAnalyzer.GetOption(story.CurrentScene, inputbox.Text);
+                Option chosenOption = TextAnalyzer.GetOption(story.CurrentScene, inputbox.Text, story.questLog);
                 if (chosenOption != null)
                 {
                     int random = 0;
@@ -135,14 +135,30 @@ namespace Textadventure
                     story.questLog.QuestLogDescription = "";
                     foreach (Quest quest in story.questLog.Quests)
                     {
-                        if (quest.QuestStatus != 0)
+                        if (story.CurrentScene.ToActivateQuest != null)
                         {
-                            story.questLog.QuestLogDescription = story.questLog.QuestLogDescription + quest.QuestName + nl + quest.QuestDescription + nl + nl;
+                            foreach (string activates in story.CurrentScene.ToActivateQuest)
+                            {
+                                if (activates == quest.QuestIdentifier)
+                                {
+                                    quest.QuestStatus = 0.1;
+                                }
+                            }
                         }
-                        else if (quest.QuestStatus != 1)
+                        if (story.CurrentScene.SceneIdentifier == quest.EndSceneIdentifier)
                         {
-                            story.questLog.QuestLogDescription = story.questLog.QuestLogDescription + quest.QuestName + " ERLEDIGT!"+ nl + nl;
+                            quest.QuestStatus = 1;
                         }
+                        if (quest.QuestStatus == 1)
+                        {
+                            story.questLog.QuestLogDescription = story.questLog.QuestLogDescription + quest.QuestName + " ERLEDIGT!" + nl + nl;
+                        }
+                        else if (quest.QuestStatus != 0)
+                        {
+                            story.questLog.QuestLogDescription = story.questLog.QuestLogDescription + "*" + quest.QuestName + ":" + nl + quest.QuestDescription + nl + nl;
+                        }
+                        
+                        
                     }
                     questBox.Text = story.questLog.QuestLogDescription;
                 }

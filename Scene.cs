@@ -80,7 +80,7 @@ public class Scene
 
     //Diese Methode ermittelt alle möglichen Optionen anhand eines Identifiers,
     //ihres Zustand und den Quests aus QuestLog.cs
-    internal Option[] getOptionsByIdentifier(OptionIdentifier identifier)
+    internal Option[] getOptionsByIdentifier(OptionIdentifier identifier, QuestLog questLog)
     {
         ArrayList validOptions = new ArrayList();
         
@@ -94,20 +94,19 @@ public class Scene
                     string[] SplitNeeded = option.NeededQuest.Split('_');
                     if (SplitNeeded.Length == 2)
                     {
-                        /*foreach (Quest quest in story.QuestLog)
-                        *{
-                        *  if (SplitNeeded[0] == quest.QuestName) 
-                        *  {
-                        *      foreach (Stage in quest.Stages)
-                        *      {
-                        *          if (SplitNeeded[1] == Stage.Ident && Stage.Status == Status.Active)
-                        *          {
-                        *              validOptions.Add(option);
-                        *          }
-                        *      }
-                        *  }
-                        *}
-                    */
+                        foreach (Quest quest in questLog.Quests)
+                        {
+                          if (SplitNeeded[0] == quest.QuestIdentifier) 
+                          {
+                                {
+                                  if (Convert.ToDouble(SplitNeeded[1]) == quest.QuestStatus)
+                                  {
+                                      validOptions.Add(option);
+                                  }
+                              }
+                          }
+                        }
+                    
                     }
                 }
                 else
