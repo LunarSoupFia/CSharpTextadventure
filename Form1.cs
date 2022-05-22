@@ -135,9 +135,13 @@ namespace Textadventure
                     story.questLog.QuestLogDescription = "";
                     foreach (Quest quest in story.questLog.Quests)
                     {
-                        if (quest.QuestStatus != 0 || quest.QuestStatus != 1)
+                        if (quest.QuestStatus != 0)
                         {
                             story.questLog.QuestLogDescription = story.questLog.QuestLogDescription + quest.QuestName + nl + quest.QuestDescription + nl + nl;
+                        }
+                        else if (quest.QuestStatus != 1)
+                        {
+                            story.questLog.QuestLogDescription = story.questLog.QuestLogDescription + quest.QuestName + " ERLEDIGT!"+ nl + nl;
                         }
                     }
                     questBox.Text = story.questLog.QuestLogDescription;

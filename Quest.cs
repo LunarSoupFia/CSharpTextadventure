@@ -5,7 +5,14 @@
 /// </summary>
 public class Quest
 {
-	private string _questName;
+    private string _questIdentifier;
+	public string QuestIdentifier
+    {
+		get { return _questIdentifier; }
+		set { _questIdentifier = value; }
+    }
+
+    private string _questName;
 	public string QuestName
 		{
 			get { return _questName; }
@@ -38,8 +45,9 @@ public class Quest
 		}
 		
 	 
-		public Quest(string QuestName, string QuestDescription, string EndSceneIdentifier, string QuestReward, double QuestStatus)
+		public Quest(string QuestIdentifier, string QuestName, string QuestDescription, string EndSceneIdentifier, string QuestReward, double QuestStatus)
 		{
+		this.QuestIdentifier = QuestIdentifier;
 		this.QuestName = QuestName;
 		this.QuestDescription = QuestDescription;	
 		this.EndSceneIdentifier = EndSceneIdentifier;

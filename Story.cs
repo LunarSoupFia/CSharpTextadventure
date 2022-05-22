@@ -11,7 +11,7 @@ namespace Textadventure
         Scene[] scenes = new Scene[] { };
         public QuestLog questLog = new QuestLog("","", new Quest[]
         {
-            new Quest("testQ","Dies ist eine TestQuest","TRAP1","", 0.1)
+            new Quest("testQ", "TestQuest","Dies ist eine Test-Quest","TRAP1","", 0.1)
 
         });
 
