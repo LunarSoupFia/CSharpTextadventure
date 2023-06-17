@@ -1,8 +1,5 @@
 ﻿using System;
 
-/// <summary>
-/// Summary description for Class1
-/// </summary>
 public class Quest
 {
     private string _questIdentifier;

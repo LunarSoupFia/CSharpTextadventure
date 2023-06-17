@@ -11,7 +11,7 @@ namespace Textadventure
         Scene[] scenes = new Scene[] { };
         public QuestLog questLog = new QuestLog("","", new Quest[]
         {
-            new Quest("SCHATZ", "Der uralte Schatz","Findet den Schatz des anktiken Volk.","END_SUCCESS","", 0.1 ),
+            new Quest("SCHATZ", "Der uralte Schatz","Findet den Schatz des antiken Volk.","END_SUCCESS","", 0.1 ),
             new Quest("TEMPLE", "Der antike Tempel", "Ihr habt herausgefunden wie man zum Tempel des antiken Volk kommt.", "TRAP1","", 0.0),
             new Quest("UMHANG", "Umhang Finden","Helft dem kleinen Mädchen ihren Umhang wieder zu finden.","LITTLE_GIRL8","", 0.0),
             new Quest("LOST.BOY", "Der verlorene Junge", "Findet den verloren Jungen Timmy, und bringt ihn zu seiner Mutter","DORF_QUEST1_END","",0.0),
